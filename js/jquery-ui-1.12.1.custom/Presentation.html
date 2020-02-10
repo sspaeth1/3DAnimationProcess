@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>UWorld Animation intro</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<link href="../../css/main.css" rel="stylesheet" >
+</head>
+
+
+<body>
+
+<header>
+	<h1 class="header">Animation Process</h1>
+	<img class="logo" src="../../imgs/logo.jpg">
+</header>
+
+
+<div id="accordion">
+
+	<h3>Visual Effects (VFX) and animation</h3>
+	<div>
+		<p>Much of the tools used for medical animation are the same tools used in the visual effects industry. Booya!</p>
+  	<img class="imgCenter" src="../../imgs/bigHero6.gif">
+	</div>
+
+	<h3>Production Flow</h3>
+		<div>
+			<img class="imgCenter" src="../../imgs/productionFlowChart.jpg" id="imgCenter">
+		</div>
+
+	<h3>Storyboard / Motion Design</h3>
+
+	<div>
+			<p>Storyboards are previsualized keyframes of the final illustration. They set the key players and concepts and organize the storyline.</p>
+		<img src="../../imgs/storyboards.jpg">
+ 	  <video controls id="vidRelative">
+				  <source src="../../vids/animatedStoryboard.mp4" type="video/mp4">
+					 Your browser does not support HTML5 video.
+			</video>
+
+	</div>
+
+	<h3>Script</h3>
+		<div>
+	 		<p>Key information gathered from the topic and test question are written to accompany the video. Voice over or onscreen text may accompany the final animation.</p>
+			<img class="imgCenter width75" src="../../imgs/timestamp.jpg">
+
+			<video controls id="vidRelative" class="imgCenter">
+						<source src="../../vids/animatedStoryboard.mp4" type="video/mp4">
+						 Your browser does not support HTML5 video.
+				</video>
+		</img>
+
+		</div>
+
+	<h3>Model Creation</h3>
+		<div>
+			<img class="width95" src="../../imgs/modeling.gif">
+		</div>
+
+		<h3>Lights, Camera, Action!</h3>
+			<div>
+				<p class="width75">Each model is built in the virtual world. It's surface need to be described with color, material and texture. Lighting illuminates the scene to define the form and mood. A virtual camera captures the 3D environment, in some cases the camera is kept still so as not to confuse any story telling or compete with animation of objects on screen. Fundamental animation includes rotating, translating and scaling objects in space. Rigging is the term for the drivers of bone animation where underlaying forms deform the shapes viewed on screen. </p>
+
+				<div class="border">
+					<p>Lights</p>
+					<img  src="../../imgs/light.jpg">
+				</div>
+
+				<div class="border">
+					<p>Camera</p>
+					<img src="../../imgs/camera.jpg">
+				</div>
+
+				<div class="border">
+					<p>Rigging</p>
+					<img src="../../imgs/rig.gif">
+				</div>
+			</div>
+
+	<h3>Rendering</h3>
+		<div>
+			<p>Rendering image sequence</p>
+			<img class="imgCenter width95" src="../../imgs/render_seq.jpg">
+		</div>
+
+		<h3>Post-Production</h3>
+			<div>
+				<h3>Compositing elements</h3>
+			</br>
+				<p>In the production of an animation often many layers are created from various rendering sequences and overlaid information. Each one of these elements must be timed with keyframes to match the sequence. Text, leader lines and other descriptive overlays are also layered on at this time.
+				</p>
+			</br>
+				<h4>Items included in composite</h4>
+				<ol class="rounded-list">
+					<li><a href="">Layers</a></li>
+					<li><a href="">Highlighting effect</a></li>
+					<li><a href="">Labeling</a></li>
+				</ol>
+
+				<p>Note how the composition flows from layers right the final composition on the left.
+										<img src="../../imgs/precomp.png">
+				</p>
+
+				<p>
+					<img class="width95" src="../../imgs/compositing.png">
+				</p>
+
+			</div>
+
+
+
+	<h3>Wireframe vs. Rendered Animations</h3>
+		<div>
+
+			<h2 class="demoHeaders">Animation 101: ball bounce</h2>
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Bounce Wireframe</a></li>
+					<li><a href="#tabs-2">Animation 101: Ball Bounce</a></li>
+				</ul>
+				<div id="tabs-1">
+						<video controls>
+					<source src="../../vids/ball_bounce_wire.mp4" type="video/mp4">
+						 Your browser does not support HTML5 video.
+					 </video>
+				</div>
+				<div id="tabs-2">
+					<video controls>
+						<source src="../../vids/ball_bounce_rendered.mp4" type="video/mp4">
+						Your browser does not support HTML5 video.
+					</video>
+				</div>
+			</div>
+
+		<h2 class="demoHeaders">Molecular Animation</h2>
+		<video controls>
+			<source src="../../vids/1AOI_histone.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+
+		</div>
+
+	<h3>Factors of Animation Production Difficulty</h3>
+		<div>
+			  <ol class="rounded-list">
+						<li><a href=""> How many variable/objects/character/player are in the scene</a></li>
+						<li><a href=""> Complexity of each variable (macromolecule vs. atom)</a></li>
+					  <li><a href=""> Length of animation</a></li>
+				</ol>
+		</div>
+</div>
+
+</div>
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+	<script>
+
+		$( function() {
+			 $( "#accordion" ).accordion({
+				 	collapsible: true,
+				 heightStyle: "fill",
+				 heightStyle: "content"
+			 });
+
+			 $( "#accordion-resizer" ).resizable({
+				 minHeight: 140,
+				 minWidth: 200,
+				 resize: function() {
+					 $( "#accordion" ).accordion( "refresh" );
+				 }
+			 });
+		 } );
+
+		$( "#tabs" ).tabs();
+
+	</script>
+</body>
+</html>
